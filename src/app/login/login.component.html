@@ -1,0 +1,30 @@
+<div class="login-container">
+  <mat-card>
+      <div class="login-wrapper">
+          <mat-form-field>
+              <input matInput class="username" name="username" placeholder="Enter your User Name" required>
+          </mat-form-field>
+          <mat-form-field>
+              <input matInput class="password" name="password" placeholder="Enter your password" required>
+          </mat-form-field>      
+         </div>
+          <mat-card-content>
+            <section class="example-section">
+              <mat-slide-toggle
+                  class="example-margin"
+                  [color]="color"
+                  [checked]="checked"
+                  [disabled]="disabled">
+      remember password      
+        </mat-slide-toggle>
+            </section>
+          </mat-card-content>
+          <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle value="login" type="button" [routerLink]="['/home']" routerLinkActive="active">LogIn</mat-button-toggle>
+          </mat-button-toggle-group>
+          <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle value="Register" type="button" [routerLink]="['/register']" routerLinkActive="active">Register</mat-button-toggle>
+          </mat-button-toggle-group>
+  </mat-card>
+  
+</div>

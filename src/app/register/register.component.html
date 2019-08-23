@@ -1,0 +1,23 @@
+<div class="login-container">
+    <mat-card>  
+    <div class="login-wrapper">
+                   
+                <mat-form-field>
+            <input matInput class="emailId" name="emailId"  placeholder="Enter EmailId" required [(ngModel)]="user.emailId">
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput class="password" name="password"   placeholder="Enter your password" required [(ngModel)]="user.password">
+        </mat-form-field> 
+        <mat-form-field>
+            <input matInput class="confirmpassword" name="confirm password" placeholder="confirm your password" required>
+        </mat-form-field>          
+       </div>
+       <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+        <button class="btn btn-success" (click)="createUser()">Create</button>
+        </mat-button-toggle-group>
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle value="Cancel" type="button" [routerLink]="['/login']" routerLinkActive="active">Cancel</mat-button-toggle>
+          </mat-button-toggle-group>
+      </mat-card>
+    </div>
+     

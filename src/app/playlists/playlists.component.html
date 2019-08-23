@@ -1,0 +1,12 @@
+<div class="custom-control-inline" *ngFor="let t of tracks">
+  <div class="card" style="width: 20rem;">
+  <div class="card-body">
+    <h3 class="card-title" >{{t.trackName}}</h3>
+    <!-- <h1>my playlist</h1>
+    <h3 class="card-title" >{{t.id}}</h3> -->
+
+    <a class="card-text" href="{{t.comments}}"  >Click here</a><br>
+    <button class="btn btn-md bg-secondary" (click)="removeFromPlaylist(t.id)"  [routerLink]="['/playlist']" routerLinkActive="active">Remove from playlist</button>
+  </div>
+</div>
+</div>
