@@ -26,6 +26,10 @@ import { HeaderComponent } from './header/header.component';
 import { RegisterComponent } from './register/register.component';
 import { UserService } from './services/user.service';
 import { PlaylistService } from './services/playlist.service';
+import { ChangepasswordComponent } from './changepassword/changepassword.component';
+import { AuthenticationService } from './services/authentication.service';
+import { RouterService } from './services/router.service';
+import { AuthGuard } from 'src/guards/auth.guard';
 
 
 
@@ -42,6 +46,7 @@ import { PlaylistService } from './services/playlist.service';
     LoginComponent,
     HeaderComponent,
     RegisterComponent,
+    ChangepasswordComponent,
     
   ],
   imports: [
@@ -56,10 +61,12 @@ import { PlaylistService } from './services/playlist.service';
     MatStepperModule,
     MatCardModule,
     MatMenuModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [TracksService,
-    UserService],
+    AuthenticationService,
+    RouterService,
+    UserService,PlaylistService,AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

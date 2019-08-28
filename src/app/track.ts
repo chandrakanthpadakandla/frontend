@@ -1,13 +1,15 @@
 export class Track{
-    // id:number;
+     id:number;
+    emailId: string;
     trackId : number;
     trackName: string;
     comments: string;
 
-    constructor(trackId, trackName, comments){
+    constructor(emailId,trackId, trackName, comments){
         // this.id=id;
         this.trackId = trackId;
         this.trackName = trackName;
         this.comments = comments;
+        this.emailId = emailId;
     }
 }

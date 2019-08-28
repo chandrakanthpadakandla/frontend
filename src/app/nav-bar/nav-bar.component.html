@@ -15,13 +15,13 @@
 <button mat-button [matMenuTriggerFor]="beforeMenu">
     Recomended
   </button> -->
-  <button type="button" [routerLink]="['/login']" routerLinkActive="active">
+  <!-- <button type="button" [routerLink]="['/login']" routerLinkActive="active">
     Login
-  </button>
+  </button> -->
    <button mat-button [matMenuTriggerFor]="menu">Profile</button>
 <mat-menu #menu="matMenu">
-  <button mat-menu-item>change password</button>
-  <button mat-menu-item  [routerLink]="['/login']" routerLinkActive="active">Logout</button>
+  <button mat-menu-item [routerLink]="['/changepassword']" routerLinkActive="active">change password</button>
+  <button mat-menu-item  [routerLink]="['']" routerLinkActive="active">Logout</button>
 </mat-menu>
 </mat-card>
 </div>

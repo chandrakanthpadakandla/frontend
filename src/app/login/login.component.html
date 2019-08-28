@@ -1,13 +1,17 @@
 <div class="login-container">
-  <mat-card>
-      <div class="login-wrapper">
+    <h1>Musix</h1>
+
+  <mat-card >
+
+      <div class="login-wrapper" >
+    
           <mat-form-field>
-              <input matInput class="username" name="username" placeholder="Enter your User Name" required>
+              <input matInput class="emailId" name="emailId" placeholder="Enter your emailId" required  [(ngModel)]="user.emailId">
           </mat-form-field>
           <mat-form-field>
-              <input matInput class="password" name="password" placeholder="Enter your password" required>
+              <input matInput class="password" name="password" placeholder="Enter your password" required  [(ngModel)]="user.password">
           </mat-form-field>      
-         </div>
+        </div>
           <mat-card-content>
             <section class="example-section">
               <mat-slide-toggle
@@ -19,12 +23,15 @@
         </mat-slide-toggle>
             </section>
           </mat-card-content>
+          <!-- <input type="hidden" name="grant_type" formControlName="grant_type"> -->
+
           <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-            <mat-button-toggle value="login" type="button" [routerLink]="['/home']" routerLinkActive="active">LogIn</mat-button-toggle>
+            <mat-button-toggle value="login" type="button"  (click)="userlogin()"  >LogIn</mat-button-toggle>
           </mat-button-toggle-group>
           <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
             <mat-button-toggle value="Register" type="button" [routerLink]="['/register']" routerLinkActive="active">Register</mat-button-toggle>
           </mat-button-toggle-group>
+        
   </mat-card>
   
 </div>

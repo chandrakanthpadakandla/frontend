@@ -1,5 +1,7 @@
 <div class="login-container">
     <mat-card>  
+            <h1>Musix</h1>
+
     <div class="login-wrapper">
                    
                 <mat-form-field>
@@ -13,7 +15,7 @@
         </mat-form-field>          
        </div>
        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-        <button class="btn btn-success" (click)="createUser()">Create</button>
+        <button class="btn btn-success" (click)="createUser()" >Create</button>
         </mat-button-toggle-group>
         <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
             <mat-button-toggle value="Cancel" type="button" [routerLink]="['/login']" routerLinkActive="active">Cancel</mat-button-toggle>

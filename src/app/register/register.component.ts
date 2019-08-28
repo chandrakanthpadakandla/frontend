@@ -16,6 +16,7 @@ export class RegisterComponent implements OnInit {
 
   constructor(private userService: UserService) { } 
   createUser(): void {
+    localStorage.setItem('emailId',this.user.emailId);
     this.userService.createUser(this.user).
     subscribe( data => {
                  alert("User created successfully.");
